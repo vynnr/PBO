@@ -1,0 +1,44 @@
+// Definisi kelas Ikan
+class Ikan {
+    // Properti atau atribut dari kelas Ikan
+    String jenis;
+    String warna;
+    int panjangCm;
+
+    // Konstruktor untuk inisialisasi objek Ikan
+    public Ikan(String jenis, String warna, int panjangCm) {
+        this.jenis = jenis;
+        this.warna = warna;
+        this.panjangCm = panjangCm;
+    }
+
+    // Method untuk menampilkan informasi Ikan
+    public void displayInfo() {
+        System.out.println("Jenis: " + jenis);
+        System.out.println("Warna: " + warna);
+        System.out.println("Panjang (cm): " + panjangCm);
+    }
+
+    // Method untuk membuat ikan berenang
+    public void berenang() {
+        System.out.println(jenis + " sedang berenang.");
+    }
+}
+
+// Kelas utama (main class)
+public class Main {
+    public static void main(String[] args) {
+        // Membuat objek dari kelas Ikan
+        Ikan ikan1 = new Ikan("Guppy", "Merah", 5);
+        Ikan ikan2 = new Ikan("Betta", "Biru", 8);
+
+        // Memanggil method untuk menampilkan informasi
+        System.out.println("Informasi Ikan 1:");
+        ikan1.displayInfo();
+        ikan1.berenang();
+
+        System.out.println("\nInformasi Ikan 2:");
+        ikan2.displayInfo();
+        ikan2.berenang();
+    }
+}
